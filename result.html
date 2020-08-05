@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Gallery</title>
+    <link rel="stylesheet" type = "text/css" href="dropdownstyle.css">
+    </head>
+<body>
+    <header>
+<div class="header">
+ <div class="innerheader">
+    <div class="logocontainer">
+        <h1>The<span>Logo</span></h1></div>
+        
+                
+             
+                      <ul class="navigation">
+                         <a href="homepage.html"><li>Home</li></a>
+                          <a href="contact.html"><li>Contact</li></a>
+                          <a href="gallery.html"><li>Gallery</li></a>
+                          <a href="More"><li class="dropdown"><span id="more">More</span>
+            <ul class="drop-nav">
+           <a href="https://www.facebook.com/"><li>Facebook</li></a><br>
+           <a href="https://www.instagram.com/hl=en"><li>Instagram</li></a><br> 
+           <a href="https://drewsgallerey.blogspot.com/"><li>Blog</li></a>
+               </ul>
+               </li></a></ul>
+                      </div>   
+
+                      </div>
+        </header>
+    <div class="result">
+    <div class="contact2">
+        You are registered
+        </div>
+    </div>
+    
+    <div id="userdata"></div>
+    
+    <script>
+    const datalist = document.getElementById("userdata")
+    new URLSearchparams(window.location.search).forEach((value, name) => {
+        datalist.append('${name}: ${value}')
+        datalist.append(document.createElement('br'))
+    })
+    </script>
+    </body>
+</html>
